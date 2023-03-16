@@ -1,0 +1,57 @@
+.p-mock{
+  .query{
+		padding: 30px 0;
+	}
+
+	.required{
+		&::before{
+			content: '*';
+			position: relative;
+		}
+	}
+
+	.operation{
+		color: #3eceb6;
+		cursor: pointer;
+		>span:not(:last-child){
+			border-right: 1px solid #ccc;
+		}
+		>span{
+			padding: 0 10px;
+		}
+	}
+	.overflow_ellipsis{
+		width: 15vw;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+
+	.preview-response{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, .5);
+
+		>p{
+			background: #fff;
+			width: 80vw;
+			height: 80vh;
+			margin: 10vh auto;
+			padding: 30px;
+			overflow-y: scroll;
+			border-radius: 10px;
+		}
+
+		.cancel{
+			position: absolute;
+			top: 10vh;
+			right: 10vw;
+			margin: 10px;
+			font-size: 25px;
+		}
+	}
+}
